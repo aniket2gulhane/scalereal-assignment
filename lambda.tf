@@ -14,7 +14,7 @@ resource "aws_lambda_function" "create_lambda" {
   role          = aws_iam_role.lambda_role.arn
   handler       = "lambda_func.import_csv"
 
-  source_code_hash = filebase64sha256(local.lambda_zip_location}
+  source_code_hash = filebase64sha256(local.lambda_zip_location)
 
   runtime = "python3.8"
 }
